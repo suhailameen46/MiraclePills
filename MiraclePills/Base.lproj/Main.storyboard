@@ -135,7 +135,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNx-6H-DzI">
                                 <rect key="frame" x="244.5" y="930" width="279" height="45"/>
                                 <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="BuyNowPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmI-xp-9SZ"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="t7L-Yo-jsH">
+                                <rect key="frame" x="294" y="422" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Pf8-bQ-sfv"/>
+                                    <constraint firstAttribute="width" constant="180" id="k1G-qy-1L5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -156,6 +166,7 @@
                             <constraint firstItem="99W-Th-ioH" firstAttribute="trailing" secondItem="ADG-wb-R2d" secondAttribute="trailing" id="IF7-PI-QDv"/>
                             <constraint firstItem="ADG-wb-R2d" firstAttribute="leading" secondItem="UQ0-Yu-KnJ" secondAttribute="leading" id="IeW-vO-WeT"/>
                             <constraint firstItem="NZp-Qa-j2b" firstAttribute="trailing" secondItem="5dZ-ym-9FM" secondAttribute="trailing" id="JES-wh-vAz"/>
+                            <constraint firstItem="t7L-Yo-jsH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jzz-yl-KbR"/>
                             <constraint firstItem="UQ0-Yu-KnJ" firstAttribute="top" secondItem="xo9-Pr-y4i" secondAttribute="bottom" constant="10" id="KAm-bq-nvw"/>
                             <constraint firstItem="Gu7-G6-Erf" firstAttribute="width" secondItem="fdr-7w-DV7" secondAttribute="width" id="Ksc-DS-Epw"/>
                             <constraint firstItem="fdr-7w-DV7" firstAttribute="centerX" secondItem="8zL-2L-wqV" secondAttribute="centerX" id="LHL-ro-UUB"/>
@@ -175,6 +186,7 @@
                             <constraint firstItem="NZp-Qa-j2b" firstAttribute="top" secondItem="5dZ-ym-9FM" secondAttribute="bottom" constant="8" id="XKy-lk-jF2"/>
                             <constraint firstItem="tHp-LU-rCE" firstAttribute="leading" secondItem="VEi-W6-9hk" secondAttribute="leading" id="YC1-eF-w2v"/>
                             <constraint firstItem="99W-Th-ioH" firstAttribute="leading" secondItem="ADG-wb-R2d" secondAttribute="leading" id="YRB-x0-QWU"/>
+                            <constraint firstItem="t7L-Yo-jsH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ymm-4N-xnv"/>
                             <constraint firstItem="w5V-CV-HjL" firstAttribute="width" secondItem="LJw-No-sNy" secondAttribute="height" multiplier="559:30" id="Z48-65-E4D"/>
                             <constraint firstItem="mBk-EW-IL8" firstAttribute="top" secondItem="99W-Th-ioH" secondAttribute="bottom" constant="8" id="ZoT-CD-OaS"/>
                             <constraint firstItem="vNx-6H-DzI" firstAttribute="top" secondItem="NZp-Qa-j2b" secondAttribute="bottom" constant="45" id="aEz-Os-e5c"/>
@@ -209,8 +221,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MainView" destination="8bC-Xf-vdC" id="kUD-E7-SD9"/>
                         <outlet property="statePicker" destination="w5V-CV-HjL" id="SAG-lZ-KAV"/>
                         <outlet property="statePickerBtn" destination="LJw-No-sNy" id="BbS-6F-dsd"/>
+                        <outlet property="successBtn" destination="t7L-Yo-jsH" id="2WZ-3p-Jsk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -221,5 +235,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

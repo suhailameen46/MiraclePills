@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var statePicker: UIPickerView!
     
     @IBOutlet var statePickerBtn: UIButton!
+    @IBOutlet var MainView: UIView!
+    @IBOutlet var successBtn: UIImageView!
     
     let states = ["Assam", "Tamil Nadu","Gujrat","Meghalaya","Arunachal Pradesh","Sikkim","New Delhi"]
     
@@ -52,5 +54,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         statePicker.isHidden = true
     }
 
+    @IBAction func BuyNowPressed(_ sender: Any) {
+        //MainView.isHidden = true
+        successBtn.isHidden = false
+    }
 }
 
